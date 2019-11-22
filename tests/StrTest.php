@@ -23,6 +23,30 @@ class StrTest extends TestCase
         static::assertFalse(Str::isFalse(0));
     }
 
+    public function testIsJsonArray()
+    {
+        static::assertTrue(Str::isJsonArray('[1]'));
+
+        static::assertFalse(Str::isJsonArray('{"key":"value"}'));
+        static::assertFalse(Str::isJsonArray('string'));
+        static::assertFalse(Str::isJsonArray(1));
+        static::assertFalse(Str::isJsonArray(true));
+        static::assertFalse(Str::isJsonArray(false));
+        static::assertFalse(Str::isJsonArray(null));
+    }
+
+    public function testJsJsonObject()
+    {
+        static::assertTrue(Str::isJsonObject('{"key":"value"}'));
+
+        static::assertFalse(Str::isJsonObject('[1]'));
+        static::assertFalse(Str::isJsonArray('string'));
+        static::assertFalse(Str::isJsonArray(1));
+        static::assertFalse(Str::isJsonArray(true));
+        static::assertFalse(Str::isJsonArray(false));
+        static::assertFalse(Str::isJsonArray(null));
+    }
+
     public function testIsTrue()
     {
         static::assertTrue(Str::isTrue('true'));
