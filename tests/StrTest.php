@@ -47,6 +47,14 @@ class StrTest extends TestCase
         static::assertFalse(Str::isJsonArray(null));
     }
 
+    public function testIsNull()
+    {
+        static::assertTrue(Str::isNull('null'));
+        static::assertTrue(Str::isNull(null));
+
+        static::assertFalse(Str::isNull(0));
+    }
+
     public function testIsTrue()
     {
         static::assertTrue(Str::isTrue('true'));

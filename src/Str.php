@@ -59,6 +59,18 @@ class Str
     }
 
     /**
+     * Is string 'null' or null
+     *
+     * @return \Closure
+     */
+    public function isNull()
+    {
+        return function ($null): bool {
+            return $null === 'null' || $null === null;
+        };
+    }
+
+    /**
      * Is string 'false' or bool false
      *
      * @return \Closure

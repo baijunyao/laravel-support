@@ -3,6 +3,7 @@
 ## Features
 - `Str::isTrue()`
 - `Str::isFalse()`
+- `Str::isNull()`
 - `Str::isJsonArray()`
 - `Str::isJsonObject()`
 
