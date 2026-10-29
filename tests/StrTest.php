@@ -8,13 +8,6 @@ use Illuminate\Support\Str;
 
 class StrTest extends TestCase
 {
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        Str::mixin(new \Baijunyao\LaravelSupport\Str());
-    }
-
     public function testIsFalse()
     {
         static::assertTrue(Str::isFalse('false'));
@@ -35,16 +28,16 @@ class StrTest extends TestCase
         static::assertFalse(Str::isJsonArray(null));
     }
 
-    public function testJsJsonObject()
+    public function testIsJsonObject()
     {
         static::assertTrue(Str::isJsonObject('{"key":"value"}'));
 
         static::assertFalse(Str::isJsonObject('[1]'));
-        static::assertFalse(Str::isJsonArray('string'));
-        static::assertFalse(Str::isJsonArray(1));
-        static::assertFalse(Str::isJsonArray(true));
-        static::assertFalse(Str::isJsonArray(false));
-        static::assertFalse(Str::isJsonArray(null));
+        static::assertFalse(Str::isJsonObject('string'));
+        static::assertFalse(Str::isJsonObject(1));
+        static::assertFalse(Str::isJsonObject(true));
+        static::assertFalse(Str::isJsonObject(false));
+        static::assertFalse(Str::isJsonObject(null));
     }
 
     public function testIsNull()

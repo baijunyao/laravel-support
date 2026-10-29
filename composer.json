@@ -1,6 +1,9 @@
 {
     "name": "baijunyao/laravel-support",
-    "keywords": ["laravel", "support"],
+    "keywords": [
+        "laravel",
+        "support"
+    ],
     "description": "Laravel Support",
     "type": "library",
     "license": "MIT",
@@ -11,7 +14,7 @@
         }
     ],
     "require": {
-        "illuminate/support": "^5.5|^6.0|^7.0|^8.0|^9.0|^10.0"
+        "illuminate/support": "^5.5|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0"
     },
     "autoload": {
         "psr-4": {
@@ -20,11 +23,11 @@
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "nunomaduro/larastan": "^0.4.3",
-        "orchestra/testbench": "^4.3",
-        "phpstan/phpstan": "^0.11.19",
-        "phpunit/phpunit": "^8.4"
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "orchestra/testbench": "^9.1|^10.0|^11.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.5",
+        "larastan/larastan": "^3.0"
     },
     "config": {
         "preferred-install": "dist",

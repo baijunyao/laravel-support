@@ -1,6 +1,6 @@
 <?php
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true,
@@ -22,7 +22,7 @@ return PhpCsFixer\Config::create()
         'function_to_constant' => ['functions' => ['get_class', 'get_called_class', 'php_sapi_name', 'phpversion', 'pi']],
         'heredoc_to_nowdoc' => true,
         'increment_style' => false,
-        'is_null' => ['use_yoda_style' => false],
+        'is_null' => true,
         'linebreak_after_opening_tag' => true,
         'list_syntax' => ['syntax' => 'short'],
         'logical_operators' => true,
@@ -33,11 +33,12 @@ return PhpCsFixer\Config::create()
         'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
         'native_constant_invocation' => false,
         'native_function_invocation' => false,
+        'static_lambda' => false,
         'no_alternative_syntax' => true,
         'no_homoglyph_names' => true,
         'no_null_property_initialization' => true,
         'no_php4_constructor' => true,
-        'no_short_echo_tag' => true,
+        'echo_tag_syntax' => ['format' => 'long'],
         'no_unneeded_curly_braces' => true,
         'no_unneeded_final_method' => true,
         'no_unreachable_default_argument_value' => true,
@@ -60,7 +61,6 @@ return PhpCsFixer\Config::create()
         'php_unit_set_up_tear_down_visibility' => true,
         'php_unit_test_case_static_method_calls' => true,
         'pow_to_exponentiation' => false,
-        'pre_increment' => false,
         'return_assignment' => true,
         'simplified_null_return' => false,
         'short_scalar_cast' => true,
